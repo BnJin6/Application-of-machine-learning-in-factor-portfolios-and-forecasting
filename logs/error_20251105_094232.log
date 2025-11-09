@@ -1,0 +1,26 @@
+2025-11-05 09:42:32 - error - ERROR - 程序执行出错: 'utf-8' codec can't decode byte 0x8b in position 64289: invalid start byte
+2025-11-05 09:42:32 - error - ERROR - Traceback (most recent call last):
+  File "/Volumes/T7/Project/python project/py/alpha/main.py", line 322, in <module>
+    main()
+  File "/Volumes/T7/Project/python project/py/alpha/main.py", line 45, in main
+    df = data_loader.load_data()
+  File "/Volumes/T7/Project/python project/py/alpha/src/data_loader.py", line 27, in load_data
+    self.data = pd.read_csv(self.data_path)
+  File "/Volumes/T7/opt/anaconda3/envs/python38/lib/python3.8/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/Volumes/T7/opt/anaconda3/envs/python38/lib/python3.8/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/Volumes/T7/opt/anaconda3/envs/python38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Volumes/T7/opt/anaconda3/envs/python38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 611, in _read
+    return parser.read(nrows)
+  File "/Volumes/T7/opt/anaconda3/envs/python38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1778, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Volumes/T7/opt/anaconda3/envs/python38/lib/python3.8/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 230, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 808, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 866, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 852, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1965, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 64289: invalid start byte
+

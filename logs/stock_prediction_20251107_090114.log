@@ -1,0 +1,39 @@
+2025-11-07 09:01:14 - stock_prediction - INFO - ================================================================================
+2025-11-07 09:01:14 - stock_prediction - INFO - 股票预测项目 - Alpha101因子量化预测
+2025-11-07 09:01:14 - stock_prediction - INFO - ================================================================================
+2025-11-07 09:01:14 - stock_prediction - INFO - 开始时间: 2025-11-07 09:01:14
+2025-11-07 09:01:14 - stock_prediction - INFO - 运行配置:
+2025-11-07 09:01:14 - stock_prediction - INFO -   数据文件: daily_data.csv
+2025-11-07 09:01:14 - stock_prediction - INFO -   训练集截止日期: 2019-12-31
+2025-11-07 09:01:14 - stock_prediction - INFO -   测试集起始日期: 2020-01-01
+2025-11-07 09:01:14 - stock_prediction - INFO -   Alpha因子数量: 27
+2025-11-07 09:01:14 - stock_prediction - INFO -   模型类型: ['LightGBM', 'XGBoost']
+2025-11-07 09:01:14 - stock_prediction - INFO -   特征选择数量: 50
+2025-11-07 09:01:14 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-07 09:01:14 - stock_prediction - INFO - 【步骤1】数据加载与预处理
+2025-11-07 09:01:14 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-07 09:01:16 - stock_prediction - INFO - 原始数据 信息:
+2025-11-07 09:01:16 - stock_prediction - INFO -   形状: (953712, 17)
+2025-11-07 09:01:16 - stock_prediction - INFO -   列数: 17
+2025-11-07 09:01:16 - stock_prediction - INFO -   行数: 953712
+2025-11-07 09:01:16 - stock_prediction - INFO -   内存使用: 680.79 MB
+2025-11-07 09:01:18 - stock_prediction - INFO - 预处理后数据 信息:
+2025-11-07 09:01:18 - stock_prediction - INFO -   形状: (953692, 19)
+2025-11-07 09:01:18 - stock_prediction - INFO -   列数: 19
+2025-11-07 09:01:18 - stock_prediction - INFO -   行数: 953692
+2025-11-07 09:01:18 - stock_prediction - INFO -   内存使用: 193.73 MB
+2025-11-07 09:01:18 - stock_prediction - INFO - 训练集样本数: 547698
+2025-11-07 09:01:18 - stock_prediction - INFO - 测试集样本数: 405626
+2025-11-07 09:01:18 - stock_prediction - INFO - 训练集股票数: 659
+2025-11-07 09:01:18 - stock_prediction - INFO - 测试集股票数: 524
+2025-11-07 09:01:18 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-07 09:01:18 - stock_prediction - INFO - 【步骤2】特征工程
+2025-11-07 09:01:18 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-07 09:01:18 - stock_prediction - INFO - 开始生成训练集特征...
+2025-11-07 09:01:18 - stock_prediction - INFO - 计算Alpha因子: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 101]
+2025-11-07 09:02:26 - stock_prediction - INFO - 训练集特征 信息:
+2025-11-07 09:02:26 - stock_prediction - INFO -   形状: (547698, 63)
+2025-11-07 09:02:26 - stock_prediction - INFO -   列数: 63
+2025-11-07 09:02:26 - stock_prediction - INFO -   行数: 547698
+2025-11-07 09:02:26 - stock_prediction - INFO -   内存使用: 299.29 MB
+2025-11-07 09:02:26 - stock_prediction - INFO - 开始生成测试集特征...

@@ -1,0 +1,30 @@
+2025-11-05 09:44:22 - error - ERROR - 程序执行出错: time data "4809175377.16" doesn't match format "%Y-%m-%d %H:%M:%S", at position 231. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-11-05 09:44:22 - error - ERROR - Traceback (most recent call last):
+  File "/Volumes/T7/Project/python project/py/alpha/main.py", line 322, in <module>
+    main()
+    ~~~~^^
+  File "/Volumes/T7/Project/python project/py/alpha/main.py", line 48, in main
+    df = data_loader.preprocess_data()
+  File "/Volumes/T7/Project/python project/py/alpha/src/data_loader.py", line 70, in preprocess_data
+    df['date'] = pd.to_datetime(df['date'])
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/core/tools/datetimes.py", line 1068, in to_datetime
+    cache_array = _maybe_cache(arg, format, cache, convert_listlike)
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/core/tools/datetimes.py", line 249, in _maybe_cache
+    cache_dates = convert_listlike(unique_dates, format)
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/core/tools/datetimes.py", line 435, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/core/tools/datetimes.py", line 469, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/tslibs/strptime.pyx", line 501, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 451, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 583, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "4809175377.16" doesn't match format "%Y-%m-%d %H:%M:%S", at position 231. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+

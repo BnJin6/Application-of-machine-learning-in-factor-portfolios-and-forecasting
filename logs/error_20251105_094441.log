@@ -1,0 +1,56 @@
+2025-11-05 09:44:41 - error - ERROR - 程序执行出错: 无法加载数据文件: 'utf-8' codec can't decode byte 0x8b in position 0: invalid start byte
+2025-11-05 09:44:41 - error - ERROR - Traceback (most recent call last):
+  File "pandas/_libs/parsers.pyx", line 1120, in pandas._libs.parsers.TextReader._convert_tokens
+  File "pandas/_libs/parsers.pyx", line 1272, in pandas._libs.parsers.TextReader._convert_with_dtype
+  File "pandas/_libs/parsers.pyx", line 1285, in pandas._libs.parsers.TextReader._string_convert
+  File "pandas/_libs/parsers.pyx", line 1535, in pandas._libs.parsers._string_box_utf8
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/T7/Project/python project/py/alpha/src/data_loader.py", line 33, in load_data
+    self.data = pd.read_csv(
+                ~~~~~~~~~~~^
+        self.data_path,
+        ^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        low_memory=False  # 避免混合类型警告
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "/Volumes/T7/opt/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 239, in read
+    data = self._reader.read(nrows)
+  File "pandas/_libs/parsers.pyx", line 820, in pandas._libs.parsers.TextReader.read
+  File "pandas/_libs/parsers.pyx", line 921, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 1066, in pandas._libs.parsers.TextReader._convert_column_data
+  File "pandas/_libs/parsers.pyx", line 1127, in pandas._libs.parsers.TextReader._convert_tokens
+  File "pandas/_libs/parsers.pyx", line 1272, in pandas._libs.parsers.TextReader._convert_with_dtype
+  File "pandas/_libs/parsers.pyx", line 1285, in pandas._libs.parsers.TextReader._string_convert
+  File "pandas/_libs/parsers.pyx", line 1535, in pandas._libs.parsers._string_box_utf8
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/T7/Project/python project/py/alpha/main.py", line 322, in <module>
+    main()
+    ~~~~^^
+  File "/Volumes/T7/Project/python project/py/alpha/main.py", line 45, in main
+    df = data_loader.load_data()
+  File "/Volumes/T7/Project/python project/py/alpha/src/data_loader.py", line 42, in load_data
+    raise Exception(f"无法加载数据文件: {str(e)}")
+Exception: 无法加载数据文件: 'utf-8' codec can't decode byte 0x8b in position 0: invalid start byte
+

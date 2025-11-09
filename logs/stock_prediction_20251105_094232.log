@@ -1,0 +1,15 @@
+2025-11-05 09:42:32 - stock_prediction - INFO - ================================================================================
+2025-11-05 09:42:32 - stock_prediction - INFO - 股票预测项目 - Alpha101因子量化预测
+2025-11-05 09:42:32 - stock_prediction - INFO - ================================================================================
+2025-11-05 09:42:32 - stock_prediction - INFO - 开始时间: 2025-11-05 09:42:32
+2025-11-05 09:42:32 - stock_prediction - INFO - 运行配置:
+2025-11-05 09:42:32 - stock_prediction - INFO -   数据文件: daily_data.csv
+2025-11-05 09:42:32 - stock_prediction - INFO -   训练集截止日期: 2019-12-31
+2025-11-05 09:42:32 - stock_prediction - INFO -   测试集起始日期: 2020-01-01
+2025-11-05 09:42:32 - stock_prediction - INFO -   Alpha因子数量: 27
+2025-11-05 09:42:32 - stock_prediction - INFO -   模型类型: ['LightGBM', 'XGBoost']
+2025-11-05 09:42:32 - stock_prediction - INFO -   特征选择数量: 50
+2025-11-05 09:42:32 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-05 09:42:32 - stock_prediction - INFO - 【步骤1】数据加载与预处理
+2025-11-05 09:42:32 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-05 09:42:32 - stock_prediction - ERROR - 数据加载失败: 'utf-8' codec can't decode byte 0x8b in position 64289: invalid start byte

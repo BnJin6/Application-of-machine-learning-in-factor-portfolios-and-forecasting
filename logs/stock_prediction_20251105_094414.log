@@ -1,0 +1,23 @@
+2025-11-05 09:44:14 - stock_prediction - INFO - ================================================================================
+2025-11-05 09:44:14 - stock_prediction - INFO - 股票预测项目 - Alpha101因子量化预测
+2025-11-05 09:44:14 - stock_prediction - INFO - ================================================================================
+2025-11-05 09:44:14 - stock_prediction - INFO - 开始时间: 2025-11-05 09:44:14
+2025-11-05 09:44:14 - stock_prediction - INFO - 运行配置:
+2025-11-05 09:44:14 - stock_prediction - INFO -   数据文件: daily_data.csv
+2025-11-05 09:44:14 - stock_prediction - INFO -   训练集截止日期: 2019-12-31
+2025-11-05 09:44:14 - stock_prediction - INFO -   测试集起始日期: 2020-01-01
+2025-11-05 09:44:14 - stock_prediction - INFO -   Alpha因子数量: 27
+2025-11-05 09:44:14 - stock_prediction - INFO -   模型类型: ['LightGBM', 'XGBoost']
+2025-11-05 09:44:14 - stock_prediction - INFO -   特征选择数量: 50
+2025-11-05 09:44:14 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-05 09:44:14 - stock_prediction - INFO - 【步骤1】数据加载与预处理
+2025-11-05 09:44:14 - stock_prediction - INFO - --------------------------------------------------------------------------------
+2025-11-05 09:44:21 - stock_prediction - INFO - 原始数据 信息:
+2025-11-05 09:44:21 - stock_prediction - INFO -   形状: (953712, 17)
+2025-11-05 09:44:21 - stock_prediction - INFO -   列数: 17
+2025-11-05 09:44:21 - stock_prediction - INFO -   行数: 953712
+2025-11-05 09:44:22 - stock_prediction - INFO -   内存使用: 608.03 MB
+2025-11-05 09:44:22 - stock_prediction - ERROR - 数据加载失败: time data "4809175377.16" doesn't match format "%Y-%m-%d %H:%M:%S", at position 231. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
